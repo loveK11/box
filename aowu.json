@@ -1,6 +1,6 @@
 {
-  "spider": "aw.png;md5;f33fe0621341289e1491f2ae55b4423b",
-  "logo": "https://file.icve.com.cn/file_doc/945/35/EC508FBD046D33EC4832BB76B63B6C94.gif",
+  "spider": "./jar/aw.png;md5;f33fe0621341289e1491f2ae55b4423b",
+  "logo": "./img/EC508FBD046D33EC4832BB76B63B6C94.gif",
   "danmaku": "http://127.0.0.1:2525/danmu?name={name}&epid={episode}",
   "wallpaper": "http://127.0.0.1:9978/proxy?do=AowuWapper&mode=2",
   "sites": [
@@ -651,7 +651,7 @@
       "changeable": 1,
       "ext": {
         "home": "1",
-        "json": "https://file.icve.com.cn/file_doc/299/797/4AFC77E563EDEDB37F18BA6458610E16.aowu",
+        "json": "./ext/4AFC77E563EDEDB37F18BA6458610E16.aowu",
         "cookie": ""
       },
       "style": {
@@ -668,7 +668,7 @@
       "quickSearch": 0,
       "changeable": 1,
       "ext": {
-        "json": "https://cdn.waimaimingtang.com/file/images/bwc/20260527100843-9aefe070b5.aowu",
+        "json": "./ext/20260527100843-9aefe070b5.aowu",
         "cookie": ""
       },
       "style": {
@@ -685,7 +685,7 @@
       "quickSearch": 0,
       "changeable": 1,
       "ext": {
-        "json": "https://cdn.waimaimingtang.com/file/images/bwc/20260527100913-7601517540.aowu",
+        "json": "./ext/20260527100913-7601517540.aowu",
         "cookie": ""
       },
       "style": {
@@ -702,7 +702,7 @@
       "quickSearch": 0,
       "changeable": 1,
       "ext": {
-        "json": "https://nos.netease.com/youdata-netease/public-utilUpload-7y79ukN4TsLcdydmg5TFRj.gz",
+        "json": "./ext/public-utilUpload-7y79ukN4TsLcdydmg5TFRj.gz",
         "cookie": ""
       },
       "style": {
@@ -719,7 +719,7 @@
       "quickSearch": 0,
       "changeable": 1,
       "ext": {
-        "json": "https://nos.netease.com/youdata-netease/public-utilUpload-4VMpA5z1erwuRYyDVSkc9T.gz",
+        "json": "./ext/public-utilUpload-4VMpA5z1erwuRYyDVSkc9T.gz",
         "cookie": ""
       },
       "style": {
@@ -736,7 +736,7 @@
       "quickSearch": 0,
       "changeable": 1,
       "ext": {
-        "json": "https://file.icve.com.cn/file_doc/281/941/466EB55404EAB8AD6EC37A5F73444B27.aowu",
+        "json": "./ext/466EB55404EAB8AD6EC37A5F73444B27.aowu",
         "cookie": ""
       },
       "style": {
@@ -753,7 +753,7 @@
       "quickSearch": 0,
       "changeable": 1,
       "ext": {
-        "json": "https://nos.netease.com/youdata-netease/public-utilUpload-vsfDQmE86Ei5LCTWJ2X6Nv.gz",
+        "json": "./ext/public-utilUpload-vsfDQmE86Ei5LCTWJ2X6Nv.gz",
         "cookie": ""
       },
       "style": {
@@ -877,7 +877,7 @@
     {
       "name": "Kimentanm",
       "type": 0,
-      "url": "https://down.nigx.cn/raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "url": "./lib/iptv.m3u",
       "playerType": 2
     },
     {
@@ -897,7 +897,7 @@
     {
       "name": "虎牙一起看",
       "type": 0,
-      "url": "https://sub.ottiptv.cc/huyayqk.m3u",
+      "url": "./lib/huyayqk.m3u",
       "playerType": 2,
       "timeout": 10,
       "ua": "okHttp/Mod-1.5.0.0"
@@ -905,7 +905,7 @@
     {
       "name": "斗鱼一起看",
       "type": 0,
-      "url": "https://sub.ottiptv.cc/douyuyqk.m3u",
+      "url": "./lib/douyuyqk.m3u",
       "playerType": 2,
       "timeout": 10,
       "ua": "okHttp/Mod-1.5.0.0"
@@ -913,7 +913,7 @@
     {
       "name": "B站直播",
       "type": 0,
-      "url": "https://sub.ottiptv.cc/bililive.m3u",
+      "url": "./lib/bililive.m3u",
       "playerType": 2,
       "timeout": 10,
       "ua": "okHttp/Mod-1.5.0.0"
@@ -921,7 +921,7 @@
     {
       "name": "YY轮播",
       "type": 0,
-      "url": "https://sub.ottiptv.cc/yylunbo.m3u",
+      "url": "./lib/yylunbo.m3u",
       "playerType": 2,
       "timeout": 10,
       "ua": "okHttp/Mod-1.5.0.0"
