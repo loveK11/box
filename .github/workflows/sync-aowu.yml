@@ -1,0 +1,41 @@
+name: Sync Aowu
+
+# 嗷呜 TVBox 接口自动更新，仿照 qist/tvbox 的 run.yml。
+# 源接口 http://www.嗷呜.cc/tv 请求后会 302 到一张 PNG，
+# 配置 JSON 以 base64 藏在图片里，tools/tvbox.py 负责取回并解密，
+# 解密失败时 scripts/sync_aowu.py 会改用嗷呜自己的 decode.php 接口。
+# 结果只写 aowu.json，定时任务用 GitHub 自带的 GITHUB_TOKEN 推送，
+# 不需要你自己的 Token。
+
+on:
+  schedule:
+    # 每天 02:00 UTC = 北京时间 10:00，跑一次
+    - cron: '0 2 * * *'
+  workflow_dispatch: # 在 Actions 页面也可以手动点 Run workflow 立即跑一次
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Decrypt Aowu interface
+        run: |
+          pip install pycryptodome --break-system-packages
+          python3 scripts/sync_aowu.py aowu.json
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add aowu.json
+          if git diff --cached --quiet; then
+            echo "No changes, skip commit."
+          else
+            git commit -m "更新嗷呜接口 $(date -u +%Y-%m-%d)"
+            git push origin main
+          fi
